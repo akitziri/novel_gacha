@@ -1,0 +1,229 @@
+/* ===== 全体 ===== */
+body {
+  font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", sans-serif;
+  background: linear-gradient(
+    180deg,
+    #fff2b2 0%,
+    #f6f5fa 40%,
+    #e9e2f7 100%
+  );
+  color: #3a3552;
+  padding: 40px;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 1280px;
+  margin: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.main-area {
+  display: flex;
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+.novel-area {
+  flex: 1;
+  min-width: 0;
+}
+
+.history-area {
+  width: 260px;
+  flex-shrink: 0;
+}
+
+/* ===== ガチャボタン ===== */
+#gachaBtn {
+  display: block;
+  margin: 30px auto;
+  padding: 15px 40px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #fff7c8, #ffe27a);
+  color: #5a4b81;
+  border: none;
+  box-shadow: 0 6px 18px rgba(255, 226, 122, 0.6);
+  cursor: pointer;
+}
+#gachaBtn:hover {
+  filter: brightness(1.05);
+}
+
+#gachaBtn:disabled {
+  opacity: 0.5;
+}
+
+/* ===== ガチャ演出 ===== */
+#gachaEffect {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* ===== 結果カード ===== */
+.result-card {
+  padding: 24px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff, #f7f4ff);
+  border: 1px solid #e0d7f5;
+  box-shadow:
+    0 12px 30px rgba(90, 75, 129, 0.15),
+    0 2px 6px rgba(90, 75, 129, 0.08);
+  animation: cardIn 0.6s ease forwards;
+}
+
+.result-title {
+  font-family: "Georgia", "Times New Roman", serif;
+  letter-spacing: 0.05em;
+  color: #5a4b81;
+  border-bottom: 1px solid #e5dcfa;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.result-body {
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+  line-height: 1.9;
+  font-size: 1rem;
+  color: #3a3552;
+}
+.result-body p {
+  margin-bottom: 1.2em;
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.badge {
+  background: linear-gradient(135deg, #84fab0, #8fd3f4);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.card-body {
+  white-space: pre-wrap;
+  line-height: 1.9;
+}
+
+/* ===== 履歴 ===== */
+.history {
+  background: #f7f4ff;
+  border: 1px solid #e0d7f5;
+  border-radius: 12px;
+  padding: 12px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.history li {
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #f0f0f0;
+  margin-bottom: 6px;
+  cursor: pointer;
+  color: #555;
+}
+
+.history li:hover {
+  background: #eee;
+}
+
+.history.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+#clearHistoryBtn {
+  background: #f3effc;
+  color: #6b5a95;
+  border: 1px solid #ddd4f3;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  box-shadow: 0 1px 3px rgba(90, 75, 129, 0.15);
+  cursor: pointer;
+  transition: background 0.15s ease, border 0.15s ease;
+}
+
+
+#clearHistoryBtn:hover {
+  background: #ebe5fa;
+  border-color: #cfc2ee;
+}
+
+#clearHistoryBtn:active {
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+#clearHistoryBtn:disabled {
+  background: #f7f6fb;
+  color: #aaa3c0;
+  border-color: #eeeaf8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.history-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#historyList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pager {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+}

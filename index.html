@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ワンツーガチャ</title>
+
+  <script src="novels/novels.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- css -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <div class="container">
+    <h1>📖 ワンツーガチャ</h1>
+
+    <button id="gachaBtn">ガチャを回す</button>
+
+    <div id="gachaEffect" style="display:none;">
+      🎰 抽選中…
+    </div>
+
+    <div class="main-area">
+      <div class="novel-area">
+        <!-- 結果カード -->
+        <div class="result-card" id="resultCard" style="display:none;">
+          <div class="card-header">
+            <h2 id="resultTitle" class="result-title"></h2>
+          </div>
+          <div class="card-body result-body" id="resultBody"></div>
+        </div>
+      </div>
+
+      <div class="history-area">
+        <!-- 履歴 -->
+        <div class="history">
+          <h2>履歴</h2>
+
+          <div class="history-controls">
+            <button id="clearHistoryBtn">クリア</button>
+          
+            <div class="pager" id="pager" style="display:none;">
+              <button id="prevPage">◀</button>
+              <span id="pageInfo"></span>
+              <button id="nextPage">▶</button>
+            </div>
+          </div>
+
+          <ul id="historyList"></ul>
+      
+        </div>
+      </div>
+    </div>
+    
+  <script src="novels/novels.js"></script>
+  <script src="novels/novel_001.js"></script>
+  <script src="novels/novel_002.js"></script>
+
+  <!-- JS -->
+  <script src="app.js"></script>
+
+</body>
+</html>
