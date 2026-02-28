@@ -46,8 +46,8 @@ $(function () {
 
       $("#resultTitle").text(selected.title);
       $("#resultBody").text(selected.body);
-      $("#resultCard").hide().fadeIn(400)[0]
-        .scrollIntoView({ behavior: "smooth" });
+      // $("#resultCard").hide().fadeIn(400)[0]
+      //   .scrollIntoView({ behavior: "smooth" });
 
       gachaHistory.push(selected);
 
