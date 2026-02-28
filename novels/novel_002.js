@@ -1,6 +1,6 @@
 window.novels.push({
     id: 2,
-    title: "帰り道/お菓子",
+    title: "帰り道",
     body: `　ぐうぅぅ。
 　はっきりと聞こえた。聞こえてしまった。
 「……」
