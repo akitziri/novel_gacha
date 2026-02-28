@@ -7,6 +7,8 @@ body {
     #f6f5fa 40%,
     #e9e2f7 100%
   );
+  background-attachment: fixed;
+  background-size: 100% 100%;
   color: #3a3552;
   padding: 40px;
   margin: 0;
@@ -34,13 +36,8 @@ h1 {
 }
 .novel-area {
   flex: 1;
-  min-width: 0;
 }
 
-.history-area {
-  width: 260px;
-  flex-shrink: 0;
-}
 
 /* ===== ガチャボタン ===== */
 #gachaBtn {
